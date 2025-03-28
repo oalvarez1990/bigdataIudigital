@@ -11,7 +11,7 @@ jobs:
       contents: write
 
     steps:
-      - name: Paso 0:Checkout repo
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Setup Python
@@ -19,25 +19,25 @@ jobs:
         with:
           python-version: '3.9.2'
 
-      - name: Paso 1:Crear entorno virtual
+      - name: Crear entorno virtual
         run: python -m venv venv
 
-      - name: Paso 2:Instalar dependencias
+      - name: Instalar dependencias
         run: |
           venv\Scripts\python -m pip install --upgrade pip
           venv\Scripts\python -m pip install -r requirements.txt || echo "requirements.txt no encontrado, instalando paquetes manualmente..."
-          venv\Scripts\python -m pip install pandas requests  # Instalamos pandas y requests manualmente
+          venv\Scripts\python -m pip install pandas requests openpyxl  # Se agrega openpyxl
 
-      - name: Paso 3:Verificar instalación de requests
-        run: venv\Scripts\python -c "import requests; print('Requests está instalado correctamente')"
+      - name: Verificar instalación de openpyxl
+        run: venv\Scripts\python -c "import openpyxl; print('openpyxl instalado correctamente')"
 
-      - name: Paso 4:Ejecutar script de ingesta
+      - name: Ejecutar script de ingesta
         run: venv\Scripts\python src/ingesta.py
 
-      - name: Paso 5:Ejecutar limpieza de datos
+      - name: Ejecutar limpieza de datos
         run: venv\Scripts\python src/cleaning.py
 
-      - name: Paso 6:Commit and Push changes
+      - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: generación informe prueba json
