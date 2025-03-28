@@ -11,7 +11,7 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout repo
+      - name: Paso 0:Checkout repo
         uses: actions/checkout@v4
 
       - name: Setup Python
@@ -19,25 +19,25 @@ jobs:
         with:
           python-version: '3.9.2'
 
-      - name: Crear entorno virtual
+      - name: Paso 1:Crear entorno virtual
         run: python -m venv venv
 
-      - name: Instalar dependencias
+      - name: Paso 2:Instalar dependencias
         run: |
           venv\Scripts\python -m pip install --upgrade pip
-          venv\Scripts\python -m pip install -r requirements.txt
-          venv\Scripts\python -m pip install pandas
+          venv\Scripts\python -m pip install -r requirements.txt || echo "requirements.txt no encontrado, instalando paquetes manualmente..."
+          venv\Scripts\python -m pip install pandas requests  # Instalamos pandas y requests manualmente
 
-      - name: Verificar instalación de pandas
-        run: venv\Scripts\python -c "import pandas; print('Pandas está instalado correctamente')"
+      - name: Paso 3:Verificar instalación de requests
+        run: venv\Scripts\python -c "import requests; print('Requests está instalado correctamente')"
 
-      - name: Ejecutar script de ingesta
+      - name: Paso 4:Ejecutar script de ingesta
         run: venv\Scripts\python src/ingesta.py
 
-      - name: Ejecutar limpieza de datos
-        run: venv\Scripts\python src/cleaning.py  # Asegurando que use el Python del entorno virtual
+      - name: Paso 5:Ejecutar limpieza de datos
+        run: venv\Scripts\python src/cleaning.py
 
-      - name: Commit and Push changes
+      - name: Paso 6:Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: generación informe prueba json
