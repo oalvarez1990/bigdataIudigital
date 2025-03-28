@@ -1,5 +1,5 @@
 === REPORTE DE LIMPIEZA DE DATOS ===
-Fecha: 2025-03-27 21:40:17
+Fecha: 2025-03-27 21:53:20
 
 === ESTADO INICIAL ===
 Total de registros: 500
