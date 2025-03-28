@@ -173,4 +173,3 @@ if __name__ == "__main__":
     logger.info(f"Ruta del reporte de auditoría: {AUDIT_PATH}")
 
     exit(main())
-

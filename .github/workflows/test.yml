@@ -30,7 +30,7 @@ jobs:
       - name: paso5 - Ejecutar script
         run: python src/ingesta.py 
       - name: paso6 - realizar limpieza de datos
-        run: python src/cleaning.py 
+        run: venv\Scripts\python src/cleaning.py
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
