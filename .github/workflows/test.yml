@@ -26,16 +26,16 @@ jobs:
         run: |
           venv\Scripts\python -m pip install --upgrade pip
           venv\Scripts\python -m pip install -r requirements.txt
-          venv\Scripts\python -m pip install pandas  
+          venv\Scripts\python -m pip install pandas
 
       - name: Verificar instalación de pandas
-        run: venv\Scripts\python -c "import pandas; print('✅ Pandas está instalado correctamente')"
+        run: venv\Scripts\python -c "import pandas; print('Pandas está instalado correctamente')"
 
       - name: Ejecutar script de ingesta
         run: venv\Scripts\python src/ingesta.py
 
       - name: Ejecutar limpieza de datos
-        run: venv\Scripts\python src/cleaning.py  # 🔥 Asegurando que use el Python del entorno virtual
+        run: venv\Scripts\python src/cleaning.py  # Asegurando que use el Python del entorno virtual
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
