@@ -1,3 +1,3 @@
 Registros extraídos del API: 100
-Registros almacenados en la base de datos: 600
+Registros almacenados en la base de datos: 700
 Comparación de integridad: ERROR
