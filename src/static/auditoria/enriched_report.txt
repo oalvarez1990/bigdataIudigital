@@ -1,0 +1,35 @@
+=== REPORTE DE ENRIQUECIMIENTO DE DATOS ===
+Fecha de generación: 2025-03-30 23:11:57
+Dataset base: /home/omar-alvarez/Documentos/Iudigital/INFRAESTRUCTURA_BIG_DATA/bigdataIudigital/src/static/cleaned_data/cleaned_data.xlsx
+Registros iniciales: 500
+Registros finales: 500
+Columnas añadidas: 12
+
+=== FUENTES DE DATOS ===
+Fuente: companies_info.json
+- Registros coincidentes: 0
+- Columnas añadidas: employees, founded_year, industry, name
+
+Fuente: salary_ranges.csv
+- Registros coincidentes: 0
+- Columnas añadidas: 
+
+Fuente: locations.xlsx
+- Registros coincidentes: 60
+- Columnas añadidas: 
+
+Fuente: industry_data.xml
+- Registros coincidentes: 0
+- Columnas añadidas: 
+
+=== OPERACIONES REALIZADAS ===
+Merge con companies_info.json: 0 registros coincidentes
+Merge con salary_ranges.csv: 0 registros coincidentes
+Merge con locations.xlsx: 60 registros coincidentes
+Merge con industry_data.xml: 0 registros coincidentes
+
+=== RESUMEN FINAL ===
+Total de registros: 500
+Total de columnas: 18
+Columnas originales: 6
+Columnas añadidas: 12

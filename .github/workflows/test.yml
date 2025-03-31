@@ -36,6 +36,9 @@ jobs:
 
       - name: Ejecutar limpieza de datos
         run: venv\Scripts\python src/cleaning.py
+      
+      - name: Ejecutar enriquecimiento de datos
+        run: venv\Scripts\python src/enrichment.py
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5

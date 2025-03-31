@@ -1,0 +1,5 @@
+[
+    {"name": "TechCorp", "founded_year": 2010, "employees": 500, "industry": "tech"},
+    {"name": "DataSystems", "founded_year": 2005, "employees": 1200, "industry": "data"},
+    {"name": "CloudNet", "founded_year": 2015, "employees": 300, "industry": "cloud"}
+]

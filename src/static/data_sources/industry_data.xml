@@ -1,0 +1,14 @@
+<industries>
+    <industry>
+        <id>tech</id>
+        <name>Technology</name>
+        <growth_rate>8.5</growth_rate>
+        <avg_salary>95000</avg_salary>
+    </industry>
+    <industry>
+        <id>data</id>
+        <name>Data Science</name>
+        <growth_rate>12.2</growth_rate>
+        <avg_salary>105000</avg_salary>
+    </industry>
+</industries>
