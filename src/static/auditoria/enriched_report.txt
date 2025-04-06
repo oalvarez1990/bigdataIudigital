@@ -1,8 +1,8 @@
 === REPORTE DE ENRIQUECIMIENTO DE DATOS ===
-Fecha de generación: 2025-04-03 02:52:35
+Fecha de generación: 2025-04-06 22:39:59
 Dataset base: D:\a\bigdataIudigital\bigdataIudigital\src\static\cleaned_data\cleaned_data.xlsx
-Registros iniciales: 800
-Registros finales: 800
+Registros iniciales: 900
+Registros finales: 900
 Columnas añadidas: 12
 
 === FUENTES DE DATOS ===
@@ -15,7 +15,7 @@ Fuente: salary_ranges.csv
 - Columnas añadidas: 
 
 Fuente: locations.xlsx
-- Registros coincidentes: 101
+- Registros coincidentes: 118
 - Columnas añadidas: 
 
 Fuente: industry_data.xml
@@ -25,11 +25,11 @@ Fuente: industry_data.xml
 === OPERACIONES REALIZADAS ===
 Merge con companies_info.json: 0 registros coincidentes
 Merge con salary_ranges.csv: 0 registros coincidentes
-Merge con locations.xlsx: 101 registros coincidentes
+Merge con locations.xlsx: 118 registros coincidentes
 Merge con industry_data.xml: 0 registros coincidentes
 
 === RESUMEN FINAL ===
-Total de registros: 800
+Total de registros: 900
 Total de columnas: 18
 Columnas originales: 6
 Columnas añadidas: 12
