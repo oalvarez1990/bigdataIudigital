@@ -212,11 +212,90 @@ jobs:
           commit_author: Omar Alvarez <omaraleyser@hotmail.com>
 
 ```
+**Documentación de los Script**
 
+`ingesta.py 
+`
 
+Script de ingesta de datos desde API
 
+Funcionalidades:
+1. Conexión a API [pública (ej. Arbeitnow)](https://www.arbeitnow.com/api/job-board-api")
+2. Extracción de datos en formato JSON
+3. Almacenamiento en base de datos SQLite
+4. Generación de archivos de evidencia:
+   - Muestra en Excel
+   - Reporte de auditoría
+   - Generación de la bd
 
+`cleaning.py 
+`
+Script de limpieza de datos
+Funcionalidades:
+1. Eliminación de duplicados
+2. Manejo de valores nulos
+3. Corrección de tipos de datos
+4. Normalización de campos
+5. Generación de reportes
 
+`enrichment.py 
+`
+Script de enriquecimiento de datos 
+Funcionalidades:
+1. Integración con el JSON
+2. Consulta al archivo xls 
+3. Consulta al archivo xml
+4. Consulta el archivo csv
 
+ **Resultado de la ejecución de los scripts**
+Cada etapa del pipeline genera:
 
+**Archivos de datos**: 
 
+- Formato Excel/CSV con muestras representativas
+
+- Base de datos SQLite con el dataset completo
+
+**Reportes de auditoría**:
+
+- Trazabilidad de las operaciones
+
+- Estadísticas antes/después del procesamiento
+
+- Validación de integridad de datos
+
+**Captura del reporte del json que se genera al ejecutar git action**
+- Reporte ingesta y limpieza de datos
+![alt text](src/image/image.png)
+
+- Reporte de auditoría 
+![alt text](src/image/image-1.png)
+
+**Diagramas de Arquitectura**
+- Diagrama de componentes
+ 
+![alt text](src/image/arquitectura_app.png)
+
+**Modelo de Datos**
+- Describe el modelo de datos resultante del proceso de integración.
+  
+![alt text](src/image/modelo_datos.png)
+
+**Diagrama flujo de datos**
+Incluye un diagrama que visualice el modelo de datos, resaltando las interconexiones y la estructura lógica que soporta el análisis en el proyecto.
+
+![alt text](src/image/diagrama_datos.png)
+
+**Licencia**
+
+- Licencia de uso del software
+- Licencia de uso de los datos
+- Licencia de uso de los componentes utilizados
+- Licencia de uso de los frameworks utilizados
+- Licencia de uso de los servicios utilizados
+
+**Contacto**
+
+- Omar Aleiser Alvarez 
+- omar.alvarez@est.iudigital.edu.co
+- Medellin- Colombia
